@@ -5,17 +5,22 @@ var fs=require("fs");
 
 
 //server configuration
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'febricams')));
 
  app.get('/', function (req, res) {
    res.sendFile(path.join(___dirname + '/index.html'));
 });
  
 
-app.get('/hello', function (req, res) {
-  console.log("CAlling rest api");
-  var person={firstName:'Ravi',lastName:'Tambade',age:43};
-  res.send(person);
+app.get('/aboutus', function (req, res) {
+  res.sendFile(path.join(___dirname + '/aboutus.html'));
+});
+
+app.get('/products', function (req, res) {
+
+  res.sendFile(path.join(___dirname + '/products.html'));
+
+
 });
 
  
